@@ -1,0 +1,27 @@
+.card-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 1rem;
+    overflow: auto;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #343a40;
+    color: #FFF;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    height: 400px;
+    overflow: hidden;
+    align-items: flex-start;
+}
+.card img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.card-title {
+    margin: 1rem;
+}

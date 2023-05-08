@@ -1,0 +1,19 @@
+<!-- <div class="card-list-container">
+    <div class="col-3"
+        *ngFor="let serie of series">
+        <div class="card">
+            <div>
+                <p>Hola mundo</p>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<div class="card-list-container">
+    <div class="card" *ngFor="let serie of series">
+    <img *ngIf="serie.poster_path"
+        [src]="'https://image.tmdb.org/t/p/w500'+ serie.poster_path" 
+        alt="{{serie.name}}">
+    <h3 class="card-title">{{serie.name}}</h3>
+    </div>
+</div>
