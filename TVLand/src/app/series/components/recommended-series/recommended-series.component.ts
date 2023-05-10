@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'recommended-series',
   templateUrl: './recommended-series.component.html',
-  styleUrls: ['./recommended-series.component.css']
+  styleUrls: ['./recommended-series.component.scss']
 })
 export class RecommendedSeriesComponent implements OnInit {
 

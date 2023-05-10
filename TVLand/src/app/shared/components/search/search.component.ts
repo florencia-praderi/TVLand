@@ -5,7 +5,7 @@ import { SeriesService } from 'src/app/series/services/series.service';
 @Component({
   selector: 'search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
 

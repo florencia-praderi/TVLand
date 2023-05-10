@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'series-card-list',
   templateUrl: './card-list.component.html',
-  styleUrls: ['./card-list.component.css']
+  styleUrls: ['./card-list.component.scss']
 })
 export class CardListComponent {
 

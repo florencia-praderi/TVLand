@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'continue-watching',
   templateUrl: './continue-watching.component.html',
-  styleUrls: ['./continue-watching.component.css'],
+  styleUrls: ['./continue-watching.component.scss'],
 })
 export class ContinueWatchingComponent implements OnInit {
   public continueWatching: Serie[] = [];
