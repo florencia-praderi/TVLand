@@ -1,19 +1,19 @@
-<!-- <div class="card-list-container">
-    <div class="col-3"
-        *ngFor="let serie of series">
-        <div class="card">
-            <div>
-                <p>Hola mundo</p>
-            </div>
-        </div>
-    </div>
-</div> -->
-
+<h2 class="section-title" *ngIf="series.length>0">Resultados de búsqueda</h2>
 <div class="card-list-container">
-    <div class="card" *ngFor="let serie of series">
-    <img *ngIf="serie.poster_path"
-        [src]="'https://image.tmdb.org/t/p/w500'+ serie.poster_path" 
-        alt="{{serie.name}}">
-    <h3 class="card-title">{{serie.name}}</h3>
-    </div>
+    <ng-container *ngFor="let serie of series">
+        <div class="card" *ngIf="serie.poster_path">
+            <div class="card-image-container">
+                <img [src]="'https://image.tmdb.org/t/p/w500'+ serie.poster_path" alt="{{serie.name}}">
+                <div class="card-buttons-container">
+                    <button class="card-button card-button-play">
+                        <i class="fas fa-play"></i>
+                    </button>
+                    <button class="card-button card-button-more-info" (click)="goToDetailPage(serie.id)">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="card-title" *ngIf="serie.poster_path">{{serie.name}}</h3>
+        </div>
+    </ng-container>
 </div>

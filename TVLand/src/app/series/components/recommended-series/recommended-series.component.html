@@ -1,0 +1,19 @@
+<h2 class="section-title">Recomendados para ti</h2>
+    <div class="card-list-container">
+        <div class="card" *ngFor="let serie of recommendedSeries">
+            <div class="card-image-container">
+                <img *ngIf="serie.poster_path" [src]="'https://image.tmdb.org/t/p/w500'+ serie.poster_path"
+                    alt="{{serie.name}}">
+                    <div class="card-buttons-container">
+                        <button class="card-button card-button-play">
+                            <i class="fas fa-play"></i>
+                        </button>
+                        <button class="card-button card-button-more-info" 
+                                (click)="goToDetailPage(serie.id)">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                    </div>
+            </div>
+            <h3 class="card-title">{{serie.name}}</h3>
+        </div>
+    </div>

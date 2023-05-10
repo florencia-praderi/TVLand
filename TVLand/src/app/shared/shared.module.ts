@@ -1,22 +1,25 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SeriesModule } from '../series/series.module';
+
+import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { SearchBoxComponent } from '../series/components/search-box/search-box.component';
-
-
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
-    SidebarComponent,
+    FooterComponent,    
     NavbarComponent,
+    SearchComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    SeriesModule
   ],
   exports: [
-    SidebarComponent,
-    NavbarComponent
+    FooterComponent,    
+    NavbarComponent,
+    SearchComponent
   ]
 })
 export class SharedModule { }

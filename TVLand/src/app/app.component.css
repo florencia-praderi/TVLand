@@ -1,7 +1,20 @@
-.flex-container {
-    display: flex;
-}  
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
 
-.flex-item {
-    flex-grow: 1;
+.main-content {
+    padding-bottom: 50px;
+    margin-bottom: 100px;
+}
+
+.flex-container {
+    flex: 1;
+}
+
+@media (max-width: 1024px) {
+    .flex-item {
+        padding-top: 100px;
+    }
 }

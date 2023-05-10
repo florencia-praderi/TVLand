@@ -1,10 +1,15 @@
 <div class="home-container">
-    <div class="col-12">
-        <!--Búsqueda-->
-        <series-search-box></series-search-box>
-    </div>
-    <div class="col-12 pt-2">
-        <!--Listado de series-->
-        <series-card-list [series]="series"></series-card-list>
-    </div>
+  <!-- Resultado de búsqueda !-->
+  <div class="cards-container">
+    <series-card-list [series]="seriesList">
+    </series-card-list>
+  </div>
+  <!-- Continuar viendo !-->
+  <div class="cards-container">
+    <continue-watching></continue-watching>
+  </div>
+  <!-- Recomendados para ti !-->
+  <div class="cards-container">
+    <recommended-series></recommended-series>
+  </div>
 </div>

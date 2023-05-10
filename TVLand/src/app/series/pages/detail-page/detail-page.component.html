@@ -1,0 +1,33 @@
+<h2 class="section-title">Detalles</h2>
+<div class="detail-container">
+    <div class="columns-container">
+        <div class="column-left">
+            <div class="card">
+                <img *ngIf="serie.poster_path" [src]="'https://image.tmdb.org/t/p/w500'+ serie.poster_path"
+                    alt="{{serie.name}}">
+            </div>  
+        </div>
+        <div class="column-right">
+            <h3 class="card-title">{{serie.name}}</h3>
+            <div class="detail">
+                <h4>Descripción: </h4>
+                <!--Si no tiene descripción, agrego una-->
+                <p *ngIf="serie.overview">{{serie.overview}}</p>
+                <p *ngIf="!serie.overview">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h4>Fecha de emisión: </h4>
+                <p>{{serie.first_air_date}}</p>
+                <h4>Temporadas: </h4>
+                <p>6</p>
+                <h4>Puntuación: </h4>
+                <p>{{serie.vote_average}}</p>
+            </div>
+            <button class="card-button">
+                <i class="fas fa-play"></i>
+                <span class="button-text">
+                    Reproducir
+                </span>
+                
+            </button>
+        </div>
+    </div>
+</div>

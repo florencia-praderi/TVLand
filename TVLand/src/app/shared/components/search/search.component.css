@@ -1,0 +1,29 @@
+.search-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+input {
+    font-family: 'Nunito', sans-serif, 'FontAwesome';
+    box-sizing: border-box;
+    width: 100%;
+    height: 40px; 
+    border: none;
+    border-radius: 20px;
+    outline: none;    
+    padding: 8px 12px;
+}
+
+input::placeholder {
+    color: #999;
+    font-family: 'Nunito', sans-serif, 'FontAwesome';
+}
+
+.fa-search {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    color: #999;
+}

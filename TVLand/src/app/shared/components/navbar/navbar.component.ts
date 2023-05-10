@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SeriesService } from '../../../series/services/series.service';
 
 @Component({
   selector: 'shared-navbar',
@@ -7,7 +8,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
-  constructor() { }
+  constructor( private seriesService: SeriesService ) { }
 
-
+  search(term: string): void {
+    this.seriesService.searchSerie(term);
+  }
+  
 }
