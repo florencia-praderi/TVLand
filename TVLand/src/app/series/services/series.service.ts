@@ -36,7 +36,7 @@ export class SeriesService {
     const params = new HttpParams()
     .set('api_key', this.apiKey)
     .set('sort_by', 'popularity.desc')
-    .set('page', '1')
+    .set('page', Math.floor(Math.random() * 100).toString())
   
     return this.http.get<SearchSeries>(`${this.serviceUrl}/discover/tv`, {params})
       .pipe(map(resp => resp.results.slice(0, 4)));
@@ -45,7 +45,7 @@ export class SeriesService {
   getContinueWatching(): Observable<Serie[]> {
     const params = new HttpParams()
     .set('api_key', this.apiKey)
-    .set('page', Math.floor(Math.random() * 100).toString()) 
+    .set('page', '1')
     .set('vote_average.gte', '7') 
 
     return this.http.get<SearchSeries>(`${this.serviceUrl}/discover/tv`, {params})
